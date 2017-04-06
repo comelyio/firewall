@@ -31,7 +31,7 @@ class Blocked
      */
     private static function Display(int $code, string $heading, string $descr = null)
     {
-        printf('<h1>%s</h1>%s', $code, $heading, PHP_EOL);
+        printf('<h1>%d &ndash; %s</h1>%s', $code, $heading, PHP_EOL);
         if($descr) {
             printf('<p>%s</p>%s', $descr, PHP_EOL);
         }
