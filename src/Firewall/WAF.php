@@ -1,10 +1,8 @@
 <?php
 declare(strict_types=1);
 
-namespace Comely;
+namespace Comely\Firewall;
 
-use Comely\Firewall\Blocked;
-use Comely\Firewall\Constants;
 use Comely\Firewall\Schema\IPGrid;
 use Comely\Firewall\Vendor\CloudFlare;
 use Comely\IO\Cache\Cache;

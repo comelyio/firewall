@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Comely;
+namespace Comely\Firewall;
 
 /**
  * Class FirewallException
