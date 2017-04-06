@@ -1,0 +1,21 @@
+{
+  "name": "comelyio/firewall",
+  "description": "WAF for Comely Apps",
+  "keywords": ["waf","comely","comelyio","firewall"],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Furqan A. Siddiqui",
+      "email": "hello@furqansiddiqui.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.0.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Comely\\Firewall\\": "src/Firewall/"
+    },
+    "files": ["src/Firewall.php", "src/FirewallException.php"]
+  }
+}
