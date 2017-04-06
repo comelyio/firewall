@@ -23,6 +23,6 @@ class IPGrid extends AbstractTable
         $this->string("method", 6, self::STR_VARIABLE)->nullable();
         $this->string("ip_address", 45, self::STR_VARIABLE);
         $this->int("second", self::INT_DEFAULT)->unSigned();
-        $this->decimal("micro_time", 14, 4)->unSigned();
+        $this->string("micro_time", 15, self::STR_FIXED);
     }
 }

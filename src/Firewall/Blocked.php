@@ -3,25 +3,23 @@ declare(strict_types=1);
 
 namespace Comely\Firewall;
 
-use Comely\IO\Http\Request\Response;
-use Comely\WAF;
-
 /**
  * Class Blocked
  * @package Comely\Firewall
  */
 class Blocked
 {
-    /**
-     * @param Response|null $response
-     */
-    public static function RateLimiting(Response $response = null)
+    public static function Screen(int $code)
     {
-        if($response) {
-            $response->setCode(429);
+        switch ($code) {
+            case 429:
+                @http_response_code(429);
+                self::Display(429, 'Rate Limiting', 'Slow down a little! Too many requests');
+                exit;
+            default:
+                @http_response_code(403);
+                self::Display(403, 'Forbidden', 'Your IP address has been blocked from accessing this endpoint');
         }
-
-        self::Display(429, 'Rate Limiting', 'Slow down a little! Too many requests');
     }
 
     /**
