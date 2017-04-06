@@ -15,7 +15,6 @@
   "autoload": {
     "psr-4": {
       "Comely\\Firewall\\": "src/Firewall/"
-    },
-    "files": ["src/Firewall.php", "src/FirewallException.php"]
+    }
   }
 }
